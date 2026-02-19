@@ -1,0 +1,393 @@
+* React + TypeScript
+* TailwindCSS
+* shadcn/ui
+* Light / Dark theme toggle
+* Left sidebar modules
+* Scroll spy right TOC
+* Each module printable (PDF-friendly)
+* One master PDF for all modules
+* Content stored as HTML inside JSON (1 HTML per module)
+
+Below is your **MASTER BUILD PROMPT** 👇
+You can paste this into Cursor / Claude / GPT / Copilot to generate the full project.
+
+---
+
+# 🧠 MASTER PROMPT — PRODUCTION DOCS SYSTEM
+
+---
+
+**ROLE:**
+You are a senior frontend architect.
+
+Build a production-ready documentation website using:
+
+* React 18
+* TypeScript
+* Vite
+* TailwindCSS
+* shadcn/ui
+* Lucide icons
+* React Router
+* IntersectionObserver for scroll spy
+* html2pdf.js for per-page PDF export
+* jsPDF for master export
+
+---
+
+# 🎯 PROJECT GOAL
+
+Build a documentation layout similar to modern developer documentation sites.
+
+Layout structure:
+
+```
+---------------------------------------------------------
+| Sidebar |     Main Content Area      |  Right TOC    |
+---------------------------------------------------------
+```
+
+Features required:
+
+1. Collapsible left sidebar
+2. Scroll spy table of contents on right
+3. Theme toggle (light/dark using shadcn)
+4. Each module printable individually (PDF)
+5. Master "Download All Docs" button
+6. Content loaded from local JSON file
+7. One HTML string per module
+8. Clean, light, modern UI
+9. Fully responsive
+10. SEO friendly
+
+---
+
+# 📦 PROJECT SETUP
+
+Create project:
+
+```
+npm create vite@latest docs-site -- --template react-ts
+cd docs-site
+npm install
+```
+
+Install:
+
+```
+npm install react-router-dom
+npm install lucide-react
+npm install html2pdf.js jspdf
+```
+
+Install Tailwind:
+
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Configure Tailwind properly.
+
+Install shadcn:
+
+Follow official shadcn init setup.
+
+Add components:
+
+* button
+* card
+* scroll-area
+* separator
+* dropdown-menu
+* sheet
+* tooltip
+
+---
+
+# 📁 FOLDER STRUCTURE
+
+```
+src/
+ ├── components/
+ │    ├── layout/
+ │    │    ├── Sidebar.tsx
+ │    │    ├── Header.tsx
+ │    │    ├── RightToc.tsx
+ │    │    └── DocsLayout.tsx
+ │    ├── pdf/
+ │    │    ├── ExportSingle.tsx
+ │    │    └── ExportAll.tsx
+ │    └── theme-toggle.tsx
+ │
+ ├── data/
+ │    └── docs.json
+ │
+ ├── pages/
+ │    └── ModulePage.tsx
+ │
+ ├── hooks/
+ │    └── useScrollSpy.ts
+ │
+ ├── App.tsx
+ └── main.tsx
+```
+
+---
+
+# 📄 DATA STRUCTURE
+
+`docs.json`
+
+```json
+[
+  {
+    "id": "auth",
+    "title": "Authentication Module",
+    "category": "Core Systems",
+    "html": "<h1>Authentication</h1><h2>Login Flow</h2><p>Details...</p>"
+  },
+  {
+    "id": "ai-system",
+    "title": "AI Voice Infrastructure",
+    "category": "AI Systems",
+    "html": "<h1>AI Voice</h1><h2>Architecture</h2><p>Details...</p>"
+  }
+]
+```
+
+Each module contains full HTML string.
+
+---
+
+# 🧱 LAYOUT IMPLEMENTATION
+
+## DocsLayout.tsx
+
+Use grid:
+
+```tsx
+<div className="grid grid-cols-[260px_1fr_260px] min-h-screen">
+```
+
+Sidebar:
+
+* sticky
+* border-r
+* scrollable
+
+Right TOC:
+
+* sticky
+* border-l
+* scrollable
+* hide on small screens
+
+Main content:
+
+* prose class
+* dark:prose-invert
+* max-w-4xl
+* centered
+
+---
+
+# 🎨 DESIGN REQUIREMENTS
+
+* Use Tailwind neutral colors
+* Background: bg-background
+* Text: text-foreground
+* Use shadcn tokens
+* Soft shadows
+* No heavy borders
+* Generous whitespace
+* Use `prose` from @tailwindcss/typography
+* Use dark:prose-invert
+* Font: Inter
+
+---
+
+# 🌙 THEME SYSTEM
+
+Use shadcn theme provider.
+
+Add toggle button in header.
+
+Persist theme in localStorage.
+
+---
+
+# 📑 MODULE PAGE LOGIC
+
+ModulePage.tsx:
+
+* Get slug from URL
+* Load module from docs.json
+* Render HTML using:
+
+```tsx
+<div
+  className="prose dark:prose-invert"
+  dangerouslySetInnerHTML={{ __html: module.html }}
+/>
+```
+
+Add id to each heading dynamically if missing.
+
+---
+
+# 📌 SCROLL SPY HOOK
+
+Create hook:
+
+```
+useScrollSpy()
+```
+
+Logic:
+
+* Query h1, h2, h3
+* Observe using IntersectionObserver
+* Track active heading id
+* Update state
+* Return activeId
+
+RightToc.tsx:
+
+* Build TOC dynamically from headings
+* Highlight active section
+* Smooth scroll on click
+
+---
+
+# 🖨 PDF EXPORT (Single Module)
+
+ExportSingle.tsx:
+
+Use html2pdf:
+
+```tsx
+html2pdf()
+  .from(document.getElementById("print-area"))
+  .save(`${module.title}.pdf`)
+```
+
+Before printing:
+
+* Add print styles
+* Hide sidebar and TOC
+
+Tailwind print styles:
+
+```css
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+```
+
+---
+
+# 📚 MASTER PDF EXPORT
+
+Loop through all modules:
+
+* Concatenate HTML
+* Create single hidden container
+* Render all modules
+* Use jsPDF to generate one combined PDF
+
+Button in header:
+"Download Full Documentation"
+
+---
+
+# 📱 RESPONSIVENESS
+
+Mobile:
+
+* Sidebar becomes Sheet
+* TOC hidden
+* Content full width
+
+Tablet:
+
+* Hide TOC
+* Keep sidebar
+
+Desktop:
+
+* 3-column layout
+
+---
+
+# ⚡ PERFORMANCE
+
+* Lazy load modules
+* Memoize TOC parsing
+* Avoid re-render on scroll
+
+---
+
+# 🔒 SECURITY
+
+Sanitize HTML before rendering using DOMPurify.
+
+Install:
+
+```
+npm install dompurify
+```
+
+Use:
+
+```tsx
+import DOMPurify from "dompurify";
+
+dangerouslySetInnerHTML={{
+  __html: DOMPurify.sanitize(module.html)
+}}
+```
+
+---
+
+# 🧠 UX IMPROVEMENTS
+
+* Add copy-to-clipboard for code blocks
+* Smooth scroll
+* Active sidebar highlight
+* Breadcrumb above content
+* Section anchor link on hover
+
+---
+
+# 🧩 OPTIONAL FUTURE EXTENSIONS
+
+* Search functionality
+* Full text indexing
+* Versioning
+* Editable admin panel
+* MD support using marked or remark
+
+---
+
+# 🎯 FINAL RESULT REQUIREMENTS
+
+The final project must:
+
+* Look clean like modern developer docs
+* Have smooth scroll spy
+* Have working dark/light toggle
+* Allow PDF export per page
+* Allow master PDF export
+* Load content from local JSON
+* Render HTML correctly
+* Be fully typed in TypeScript
+* Follow modular architecture
+
+---
+
+# 🚀 END OF MASTER PROMPT
+
+---

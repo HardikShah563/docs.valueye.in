@@ -1,0 +1,52 @@
+{
+  "sections": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "modules": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "html": "<h1>Overview</h1><p>Welcome to the documentation. This guide will help you understand the system architecture and get started quickly.</p><h2>Key Concepts</h2><p>Before diving in, familiarize yourself with these core concepts that form the foundation of our platform.</p><h3>Architecture</h3><p>The system is built on a modular architecture that allows for flexibility and scalability. Each component is designed to work independently while integrating seamlessly.</p>"
+        },
+        {
+          "id": "installation",
+          "title": "Installation",
+          "html": "<h1>Installation</h1><p>Get up and running in minutes with our simple installation process.</p><h2>Prerequisites</h2><p>Ensure you have Node.js 18+ and npm installed on your system.</p><h3>Quick Start</h3><pre><code>npm install\nnpm run dev</code></pre><h2>Configuration</h2><p>Copy the example config and customize as needed for your environment.</p>"
+        }
+      ]
+    },
+    {
+      "id": "core-systems",
+      "title": "Core Systems",
+      "modules": [
+        {
+          "id": "auth",
+          "title": "Authentication",
+          "html": "<h1>Authentication Module</h1><p>Secure user authentication is at the heart of the platform. Learn how to implement and customize the auth flow.</p><h2>Login Flow</h2><p>The login process follows OAuth 2.0 standards for maximum security and compatibility.</p><h3>Session Management</h3><p>Sessions are managed securely with HTTP-only cookies and short-lived tokens.</p><h2>Multi-Factor Auth</h2><p>Optional MFA support adds an extra layer of security for sensitive operations.</p>"
+        },
+        {
+          "id": "api",
+          "title": "API Reference",
+          "html": "<h1>API Reference</h1><p>Complete documentation for all REST and GraphQL endpoints.</p><h2>REST API</h2><p>All REST endpoints follow RESTful conventions. Base URL: <code>https://api.example.com/v1</code></p><h3>Authentication</h3><p>Include your API key in the Authorization header.</p><h2>Rate Limits</h2><p>Standard tier: 1000 requests/hour. Contact support for higher limits.</p>"
+        }
+      ]
+    },
+    {
+      "id": "ai-systems",
+      "title": "AI Systems",
+      "modules": [
+        {
+          "id": "ai-voice",
+          "title": "AI Voice Infrastructure",
+          "html": "<h1>AI Voice Infrastructure</h1><p>Advanced voice AI capabilities powered by state-of-the-art models.</p><h2>Architecture</h2><p>Our voice pipeline processes audio in real-time with sub-100ms latency.</p><h3>Supported Languages</h3><p>50+ languages with native accent support. Automatic language detection available.</p><h2>Best Practices</h2><p>Use streaming for real-time applications. Batch processing for analytics.</p>"
+        },
+        {
+          "id": "llm-integration",
+          "title": "LLM Integration",
+          "html": "<h1>LLM Integration</h1><p>Integrate with large language models for natural language understanding and generation.</p><h2>Available Models</h2><p>GPT-4, Claude, and open-source alternatives. Switch models with a single config change.</p><h3>Prompt Engineering</h3><p>Structured prompts with templating. Support for few-shot examples and chain-of-thought.</p>"
+        }
+      ]
+    }
+  ]
+}
