@@ -28,6 +28,7 @@ export function DocsLayout() {
         onSidebarOpenChange={setSidebarOpen}
         currentModuleId={module?.id}
         currentModuleTitle={module?.title}
+        currentModuleHtml={module?.html}
       />
       <div className="flex">
         <Sidebar data={data} />

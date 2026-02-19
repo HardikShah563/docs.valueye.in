@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import docsData from "@/data/docs.json"
 import type { DocsData } from "@/types/docs"
 import { getModuleById, getSectionForModule } from "@/types/docs"
-import { getPrintAreaId } from "@/components/pdf/ExportSingle"
 
 const data = docsData as DocsData
 
@@ -51,7 +50,6 @@ export function ModulePage() {
   }
 
   const safeHtml = addHeadingIds(DOMPurify.sanitize(module.html))
-  const printAreaId = getPrintAreaId(module.id)
 
   return (
     <article className="space-y-6">
@@ -73,7 +71,6 @@ export function ModulePage() {
       </nav>
 
       <div
-        id={printAreaId}
         className="prose prose-neutral dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: safeHtml }}
       />

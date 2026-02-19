@@ -1,50 +1,81 @@
 {
   "sections": [
     {
-      "id": "getting-started",
-      "title": "Getting Started",
+      "id": "enterprise-erp",
+      "title": "Enterprise ERP",
       "modules": [
         {
-          "id": "overview",
-          "title": "Overview",
-          "html": "<h1>Overview</h1><p>Welcome to the documentation. This guide will help you understand the system architecture and get started quickly.</p><h2>Key Concepts</h2><p>Before diving in, familiarize yourself with these core concepts that form the foundation of our platform.</p><h3>Architecture</h3><p>The system is built on a modular architecture that allows for flexibility and scalability. Each component is designed to work independently while integrating seamlessly.</p>"
+          "id": "erp-overview",
+          "title": "ERP Suite Overview",
+          "html": "<h1>Enterprise ERP Suite</h1><p>Our custom-built ERP is tailored to your enterprise needs. A unified platform that connects CRM, operations, billing, and HR—replacing siloed tools with one cohesive system.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=ERP+Dashboard\" alt=\"ERP Dashboard\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Unified ERP dashboard</figcaption></figure><h2>What's Included</h2><ul><li><strong>CRM & Complaints</strong> – Lead tracking, customer history, ticket management</li><li><strong>AMC Services</strong> – Annual maintenance contracts, renewals, service schedules</li><li><strong>Automated Billing & Accounts</strong> – Invoicing, ledger sync, payment reminders</li><li><strong>Tool Management</strong> – Equipment tracking, allocation, maintenance logs</li><li><strong>Employee & Login Control</strong> – Role-based access, audit trails</li><li><strong>Attendance & Payroll</strong> – Biometric integration, leave, salary processing</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=ERP+Modules\" alt=\"ERP Modules\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Modular ERP architecture</figcaption></figure><p>Built to scale with your business. No generic templates—every workflow is designed around your processes.</p>"
         },
         {
-          "id": "installation",
-          "title": "Installation",
-          "html": "<h1>Installation</h1><p>Get up and running in minutes with our simple installation process.</p><h2>Prerequisites</h2><p>Ensure you have Node.js 18+ and npm installed on your system.</p><h3>Quick Start</h3><pre><code>npm install\nnpm run dev</code></pre><h2>Configuration</h2><p>Copy the example config and customize as needed for your environment.</p>"
+          "id": "erp-crm-complaints",
+          "title": "CRM & Complaints",
+          "html": "<h1>CRM & Complaints Management</h1><p>Centralize customer interactions, track leads through the pipeline, and resolve complaints with structured workflows and escalation rules.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=CRM+Dashboard\" alt=\"CRM Dashboard\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">CRM pipeline view</figcaption></figure><h2>Key Features</h2><ul><li>360° customer view with history and notes</li><li>Complaint tickets with SLA tracking and auto-assignment</li><li>Lead scoring and follow-up reminders</li><li>Email and activity logging</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Complaints+Workflow\" alt=\"Complaints Workflow\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Complaint workflow</figcaption></figure>"
+        },
+        {
+          "id": "erp-billing-accounts",
+          "title": "Billing & Accounts Integration",
+          "html": "<h1>Automated Billing & Accounts Integration</h1><p>Connect billing to your accounting system. Generate invoices, sync ledgers, and automate payment reminders—reducing manual data entry and reconciliation errors.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Billing+Automation\" alt=\"Billing Automation\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Billing and invoicing</figcaption></figure><h2>Capabilities</h2><ul><li>Recurring invoices and AMC renewals</li><li>Integration with Tally, QuickBooks, and custom ERP</li><li>Payment tracking and reconciliation</li><li>Automated reminders and statements</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Accounts+Sync\" alt=\"Accounts Integration\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Ledger sync</figcaption></figure>"
+        },
+        {
+          "id": "erp-hr-operations",
+          "title": "HR, Attendance & Payroll",
+          "html": "<h1>Employee Control, Attendance & Payroll</h1><p>Manage employees, enforce login policies, track attendance, and process payroll—all within the same system that handles your operations.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Attendance\" alt=\"Attendance\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Attendance dashboard</figcaption></figure><h2>Features</h2><ul><li><strong>Employee & Login Control</strong> – Role-based access, device limits, session management</li><li><strong>Attendance</strong> – Biometric, QR, or app-based check-in/out</li><li><strong>Payroll</strong> – Salary calculation, PF/ESI, payslips, bank transfers</li><li><strong>Tool Management</strong> – Assign equipment, track usage, maintenance schedules</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Payroll+Reports\" alt=\"Payroll\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Payroll reports</figcaption></figure>"
         }
       ]
     },
     {
-      "id": "core-systems",
-      "title": "Core Systems",
+      "id": "content-docs",
+      "title": "Content & Documents",
       "modules": [
         {
-          "id": "auth",
-          "title": "Authentication",
-          "html": "<h1>Authentication Module</h1><p>Secure user authentication is at the heart of the platform. Learn how to implement and customize the auth flow.</p><h2>Login Flow</h2><p>The login process follows OAuth 2.0 standards for maximum security and compatibility.</p><h3>Session Management</h3><p>Sessions are managed securely with HTTP-only cookies and short-lived tokens.</p><h2>Multi-Factor Auth</h2><p>Optional MFA support adds an extra layer of security for sensitive operations.</p>"
-        },
-        {
-          "id": "api",
-          "title": "API Reference",
-          "html": "<h1>API Reference</h1><p>Complete documentation for all REST and GraphQL endpoints.</p><h2>REST API</h2><p>All REST endpoints follow RESTful conventions. Base URL: <code>https://api.example.com/v1</code></p><h3>Authentication</h3><p>Include your API key in the Authorization header.</p><h2>Rate Limits</h2><p>Standard tier: 1000 requests/hour. Contact support for higher limits.</p>"
+          "id": "blog-document-management",
+          "title": "Blog & Document Management",
+          "html": "<h1>Blog & Document Management</h1><p>Create, publish, and organize content—blogs, knowledge bases, and internal documents—with versioning, search, and access control.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Blog+CMS\" alt=\"Blog CMS\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Content editor</figcaption></figure><h2>Features</h2><ul><li>Rich-text editor with media support</li><li>Categories, tags, and search</li><li>Draft, review, and publish workflows</li><li>Document storage with folders and permissions</li><li>Version history and audit trails</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Document+Library\" alt=\"Document Library\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Document library</figcaption></figure>"
         }
       ]
     },
     {
-      "id": "ai-systems",
-      "title": "AI Systems",
+      "id": "proptech",
+      "title": "Proptech",
       "modules": [
         {
-          "id": "ai-voice",
-          "title": "AI Voice Infrastructure",
-          "html": "<h1>AI Voice Infrastructure</h1><p>Advanced voice AI capabilities powered by state-of-the-art models.</p><h2>Architecture</h2><p>Our voice pipeline processes audio in real-time with sub-100ms latency.</p><h3>Supported Languages</h3><p>50+ languages with native accent support. Automatic language detection available.</p><h2>Best Practices</h2><p>Use streaming for real-time applications. Batch processing for analytics.</p>"
+          "id": "proptech-overview",
+          "title": "Property Management System",
+          "html": "<h1>Proptech – Property Management System</h1><p>End-to-end property management: visitor flows, security, approvals, communication, facility ops, and billing—all in one platform.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Proptech+Dashboard\" alt=\"Proptech Dashboard\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Property management dashboard</figcaption></figure><h2>Core Capabilities</h2><ul><li><strong>Visitor Management</strong> – Pre-registration, check-in, badges</li><li><strong>Security Workflows</strong> – Patrols, incidents, access logs</li><li><strong>Approvals</strong> – Maintenance requests, gate passes, NOCs</li><li><strong>Communication</strong> – Resident notices, bulk SMS/email</li><li><strong>Staff Coordination</strong> – Task assignment, shift scheduling</li><li><strong>Facility Operations</strong> – Amenities booking, maintenance tracking</li><li><strong>Billing & Maintenance</strong> – Society charges, due reminders</li><li><strong>AI Automation</strong> – Optional smart suggestions and automation</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Proptech+Ecosystem\" alt=\"Proptech Overview\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Proptech ecosystem</figcaption></figure>"
         },
         {
-          "id": "llm-integration",
-          "title": "LLM Integration",
-          "html": "<h1>LLM Integration</h1><p>Integrate with large language models for natural language understanding and generation.</p><h2>Available Models</h2><p>GPT-4, Claude, and open-source alternatives. Switch models with a single config change.</p><h3>Prompt Engineering</h3><p>Structured prompts with templating. Support for few-shot examples and chain-of-thought.</p>"
+          "id": "proptech-visitor-security",
+          "title": "Visitor & Security",
+          "html": "<h1>Visitor & Security Management</h1><p>Streamline visitor entry with pre-registration, QR codes, and real-time check-in. Log security rounds, incidents, and access for audit and compliance.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Visitor+Management\" alt=\"Visitor Management\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Visitor check-in</figcaption></figure><h2>What You Get</h2><ul><li>Visitor pre-registration and OTP/QR entry</li><li>Security patrol tracking and incident reports</li><li>Access control logs and reports</li><li>Integration with existing gate systems</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Security+Workflow\" alt=\"Security Workflow\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Security workflows</figcaption></figure>"
+        },
+        {
+          "id": "proptech-operations-billing",
+          "title": "Operations, Billing & AI",
+          "html": "<h1>Operations, Billing & AI Automation</h1><p>Run facility ops smoothly—maintenance requests, approvals, staff tasks—and automate billing, reminders, and reporting. Optional AI boosts efficiency with smart insights.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Facility+Operations\" alt=\"Facility Operations\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Facility operations</figcaption></figure><h2>Features</h2><ul><li>Maintenance request and approval flows</li><li>Society billing, maintenance charges, due reminders</li><li>Staff task allocation and coordination</li><li>AI-driven automation for common workflows</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=AI+Automation\" alt=\"Proptech AI\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">AI automation</figcaption></figure>"
+        }
+      ]
+    },
+    {
+      "id": "custom-ai",
+      "title": "Custom AI Services",
+      "modules": [
+        {
+          "id": "ai-database-agents",
+          "title": "Database Query Agents",
+          "html": "<h1>Database Query Agents</h1><p>AI agents that query your data directly—ask questions in plain language and get answers from your data-lake or databases. No SQL needed, with governed access and audit logs.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Database+Query+Agent\" alt=\"Database Query Agent\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Natural language to data</figcaption></figure><h2>How It Works</h2><ul><li>Connect to your data sources (DB, data-lake, APIs)</li><li>Ask questions in natural language</li><li>Agents generate queries, run them safely, and return results</li><li>Role-based access and query logging</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Data+Lake+Query\" alt=\"Data Lake Query\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Data-lake integration</figcaption></figure>"
+        },
+        {
+          "id": "ai-telecalling-outreach",
+          "title": "Tele-calling Bots & Outreach",
+          "html": "<h1>Tele-calling Bots & Automated Outreach</h1><p>AI bots that call customers from batch files, follow scripts, and handle responses. Combined with WhatsApp and email automation—a full outreach package that drives scheduled meetings.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Tele-calling+Bot\" alt=\"Tele-calling Bot\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Tele-calling bot</figcaption></figure><h2>What's Included</h2><ul><li><strong>Tele-calling Bots</strong> – Batch file upload, auto-dial, scripted conversations</li><li><strong>WhatsApp Automation</strong> – Templates, triggers, follow-ups</li><li><strong>Email Automation</strong> – Drip campaigns, sequences</li><li><strong>Meeting Scheduling</strong> – Calendars, reminders, confirmations</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=WhatsApp+%26+Email\" alt=\"WhatsApp Email Automation\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Outreach automation</figcaption></figure>"
+        },
+        {
+          "id": "ai-call-analytics",
+          "title": "Call Recording Analysis",
+          "html": "<h1>Call Recording Analysis</h1><p>Turn call recordings into actionable insights: improve pitch, spot training needs, catch anomalies, and flag bad customer behavior—all with AI-driven analysis.</p><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Call+Analytics\" alt=\"Call Analytics\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Call analytics dashboard</figcaption></figure><h2>Use Cases</h2><ul><li><strong>Sales Conversion</strong> – What works in winning pitches</li><li><strong>Tele-caller Coaching</strong> – Gaps in script, tone, objection handling</li><li><strong>Anomaly Detection</strong> – Unusual patterns, compliance risks</li><li><strong>Customer Behavior</strong> – Track abuse, escalation triggers</li></ul><figure class=\"my-6 rounded-lg overflow-hidden border border-border\"><img src=\"https://placehold.co/800x450/1e293b/94a3b8?text=Call+Insights\" alt=\"Call Insights\" class=\"w-full h-auto\" /><figcaption class=\"p-2 text-sm text-muted-foreground text-center\">Insights and trends</figcaption></figure>"
         }
       ]
     }

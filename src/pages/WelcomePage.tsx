@@ -69,11 +69,11 @@ export function WelcomePage() {
           <div>
             <h3 className="font-semibold">Ready to dive in?</h3>
             <p className="text-sm text-muted-foreground">
-              Start with the Overview or jump to a specific module.
+              Explore our products and services, or jump to a specific module.
             </p>
           </div>
           <Button asChild>
-            <Link to="/docs/overview" className="gap-2">
+            <Link to="/docs/erp-overview" className="gap-2">
               Get Started
               <ArrowRight className="h-4 w-4" />
             </Link>
