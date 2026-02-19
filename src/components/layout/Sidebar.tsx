@@ -66,7 +66,7 @@ export function Sidebar({
   }
 
   return (
-    <aside className="no-print sticky top-0 hidden h-screen w-[260px] min-w-[260px] shrink-0 flex-col border-r border-border bg-muted/30 lg:flex">
+    <aside className="no-print sticky top-0 hidden h-screen w-[260px] min-w-[260px] shrink-0 flex-col border-r border-primary bg-muted/30 lg:flex">
       <ScrollArea className="flex-1">
         <div className="p-3">{content}</div>
       </ScrollArea>
@@ -91,7 +91,7 @@ function SectionNav({
           {section.title}
         </span>
       </div>
-      <div className="border-l border-border ml-4 pl-2">
+      <div className="border-l border-primary ml-4 pl-2">
         {section.modules.map((module) => {
           const to = `/docs/${module.id}`
           const active = currentPath === to

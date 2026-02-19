@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "assets": "pwa-assets-generator --preset minimal public/logo.png",
+    "assets": "pwa-assets-generator --preset minimal public/logo.svg",
     "serve": "serve -s dist -p 5173",
     "build-and-serve": "npm run build && npm run serve"
   },

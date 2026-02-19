@@ -70,10 +70,10 @@ export default defineConfig({
                 navigateFallback: null
             },
             manifest: {
-                name: "Aptos",
-                short_name: "Aptos",
+                name: "Developments & Modules - Valueye",
+                short_name: "Developments & Modules Valueye",
                 description:
-                    "Accounting Platform for Technological Organizations and Societies (APTOS) - The Ultimate Society Management App",
+                    "Developments & Modules Valueye",
                 theme_color: "#101010",
                 background_color: "#ffffff",
                 display: "standalone",

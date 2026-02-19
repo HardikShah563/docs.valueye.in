@@ -19,7 +19,7 @@ export function WelcomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-10 md:pt-16 lg:pt-20">
+      <section className="relative">
         <div className="flex flex-col items-center text-center space-y-6 max-w-4xl mx-auto px-4">
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm text-primary mb-6 backdrop-blur-sm">
@@ -35,7 +35,7 @@ export function WelcomePage() {
 
             <h1 className="text-4xl font-extrabold tracking-tight text-foreground md:text-6xl lg:text-7xl">
               Build better with <br className="hidden md:block" />
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Developments & Modules
               </span>
             </h1>
@@ -48,7 +48,7 @@ export function WelcomePage() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4 animate-in fade-in slide-in-from-bottom-6 delay-300 duration-700">
             <Button size="lg" className="h-12 px-12 rounded-full shadow-lg shadow-primary/20" asChild>
-              <Link to="/docs/erp-overview">
+              <Link to="/docs/proptech-overview">
                 Start Building
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -142,7 +142,7 @@ export function WelcomePage() {
                 <Link to="/contact">Contact Support</Link>
               </Button>
               <Button asChild>
-                <Link to="/docs/erp-overview" className="gap-2">
+                <Link to="/docs/proptech-overview" className="gap-2">
                   Get Started <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

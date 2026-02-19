@@ -37,7 +37,7 @@ export function DocsLayout() {
       <div className="flex min-h-[calc(100vh-3.5rem)]">
         <Sidebar data={data} />
         <main ref={mainRef} className="min-w-0 flex-1 overflow-auto">
-          <div ref={contentRef} className="mx-auto max-w-4xl px-6 py-10">
+          <div ref={contentRef} className="mx-auto max-w-6xl px-6 py-10">
             <Outlet />
           </div>
         </main>
