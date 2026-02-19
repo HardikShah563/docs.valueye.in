@@ -16,7 +16,7 @@ export function ExportSingle({
   moduleTitle,
   html,
   variant,
-  size,
+  // size,
   className,
 }: ExportSingleProps) {
   const [loading, setLoading] = useState(false)
@@ -49,7 +49,6 @@ export function ExportSingle({
   return (
     <Button
       variant={variant ?? "ghost"}
-      size={size ?? "icon"}
       onClick={handleExport}
       disabled={loading}
       className={cn(className)}

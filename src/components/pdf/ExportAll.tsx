@@ -17,7 +17,7 @@ interface ExportAllProps {
 export function ExportAll({
   data,
   variant,
-  size,
+  // size,
   className,
 }: ExportAllProps) {
   const [loading, setLoading] = useState(false)
@@ -78,7 +78,7 @@ export function ExportAll({
   return (
     <Button
       variant={variant ?? "outline"}
-      size={size ?? "sm"}
+      // size={size ?? "sm"}
       onClick={handleExport}
       disabled={loading}
       className={cn("gap-2", className)}

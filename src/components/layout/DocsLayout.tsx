@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Outlet, useLocation } from "react-router-dom"
 import docsData from "@/data/docs.json"
 import type { DocsData } from "@/types/docs"
@@ -7,14 +7,18 @@ import { Sidebar } from "./Sidebar"
 import { RightToc } from "./RightToc"
 import { useScrollSpy } from "@/hooks/useScrollSpy"
 import { getModuleById } from "@/types/docs"
-import { useRef } from "react"
-
 const data = docsData as DocsData
 
 export function DocsLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const location = useLocation()
   const contentRef = useRef<HTMLDivElement>(null)
+  const mainRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    mainRef.current?.scrollTo({ top: 0 })
+    window.scrollTo({ top: 0 })
+  }, [location.pathname])
   const { activeId, headings } = useScrollSpy(contentRef, [location.pathname])
 
   const moduleId = location.pathname.replace(/^\/docs\//, "") || undefined
@@ -30,9 +34,9 @@ export function DocsLayout() {
         currentModuleTitle={module?.title}
         currentModuleHtml={module?.html}
       />
-      <div className="flex">
+      <div className="flex min-h-[calc(100vh-3.5rem)]">
         <Sidebar data={data} />
-        <main className="min-h-[calc(100vh-3.5rem)] flex-1 overflow-auto">
+        <main ref={mainRef} className="min-w-0 flex-1 overflow-auto">
           <div ref={contentRef} className="mx-auto max-w-4xl px-6 py-10">
             <Outlet />
           </div>

@@ -17,7 +17,7 @@ export function WelcomePage() {
           </div>
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Welcome to Valueye Docs
+              Welcome to Developments & Modules
             </h1>
             <p className="mt-1.5 text-muted-foreground">
               Everything you need to build with our platform
