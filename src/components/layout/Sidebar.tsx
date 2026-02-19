@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
-import { BookOpen, ChevronDown, FolderOpen } from "lucide-react"
+import { FolderOpen, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { DocsData, DocSection } from "@/types/docs"
 import { Button } from "@/components/ui/button"
@@ -50,7 +50,7 @@ export function Sidebar({
             className="lg:hidden shrink-0"
             aria-label="Open menu"
           >
-            <BookOpen className="h-5 w-5" />
+            <Menu className="h-5 w-5" />
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="w-[280px] p-0">
@@ -91,31 +91,33 @@ function SectionNav({
           {section.title}
         </span>
       </div>
-      {section.modules.map((module) => {
-        const to = `/docs/${module.id}`
-        const active = currentPath === to
-        return (
-          <Link
-            key={module.id}
-            to={to}
-            className={cn(
-              "flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors",
-              active
-                ? "bg-primary text-primary-foreground font-medium"
-                : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-            )}
-            onClick={onLinkClick}
-          >
-            <ChevronDown
+      <div className="border-l border-border ml-4 pl-2">
+        {section.modules.map((module) => {
+          const to = `/docs/${module.id}`
+          const active = currentPath === to
+          return (
+            <Link
+              key={module.id}
+              to={to}
+              className={cn(
+                "flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors",
+                active
+                  ? "bg-primary text-primary-foreground font-medium"
+                  : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+              )}
+              onClick={onLinkClick}
+            >
+              {/* <ChevronDown
               className={cn(
                 "h-4 w-4 shrink-0 -rotate-90",
                 active && "text-primary-foreground"
               )}
-            />
-            {module.title}
-          </Link>
-        )
-      })}
+            /> */}
+              {module.title}
+            </Link>
+          )
+        })}
+      </div>
     </div>
   )
 }
