@@ -36,7 +36,7 @@ export function ContactUsPage() {
                             </div>
                             <div>
                                 <p className="text-sm font-medium text-foreground">Email</p>
-                                <p className="text-sm text-muted-foreground">support@example.com</p>
+                                <p className="text-sm text-muted-foreground">info@valueye.in</p>
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@ export function ContactUsPage() {
                             </div>
                             <div>
                                 <p className="text-sm font-medium text-foreground">Phone</p>
-                                <p className="text-sm text-muted-foreground">+1 (555) 000-0000</p>
+                                <p className="text-sm text-muted-foreground">+91 93210 12106</p>
                             </div>
                         </div>
 
@@ -56,7 +56,7 @@ export function ContactUsPage() {
                             </div>
                             <div>
                                 <p className="text-sm font-medium text-foreground">Office</p>
-                                <p className="text-sm text-muted-foreground">123 Innovation Drive<br />Tech City, TC 10010</p>
+                                <p className="text-sm text-muted-foreground">Mulund West, Mumbai,<br />Maharashtra, 400080</p>
                             </div>
                         </div>
                     </div>
